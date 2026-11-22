@@ -9,15 +9,16 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Setting up Python environment...'
-                bat 'python -m venv venv'
-                bat 'venv\\Scripts\\python -m pip install pytest'
+                echo 'Checking Python...'
+                sh 'python3 --version'
+                sh 'python3 -m venv venv'
+                sh './venv/bin/pip install pytest'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running automated tests...'
-                bat 'venv\\Scripts\\python -m pytest -v'
+                sh './venv/bin/python -m pytest -v'
             }
         }
     }
