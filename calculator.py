@@ -28,4 +28,4 @@ if __name__ == "__main__":
         try:
             print("Result:", ops[op](x, y))
         except ValueError as e:
-            print("Error:", e)
+            print("Error:", e)# auto trigger test
