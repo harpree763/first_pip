@@ -1,0 +1,4 @@
+kubectl.exe
+__pycache__/
+venv/
+.pytest_cache/
